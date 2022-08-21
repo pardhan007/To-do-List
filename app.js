@@ -29,7 +29,7 @@ app.use(session({
 app.use(passport.initialize()); // initalize session
 app.use(passport.session()); // use passport to manage session
 
-mongoose.connect("mongodb+srv://admin-harsh:harsh123@cluster0.6asgh9f.mongodb.net/todoModified", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://admin-harsh:harsh123@cluster0.6asgh9f.mongodb.net/advancedTodo", { useNewUrlParser: true });
 // mongoose.connect("mongodb://localhost:27017/todoModified", { useNewUrlParser: true });
 
 
@@ -73,9 +73,13 @@ passport.use(new GoogleStrategy({
     function (accessToken, refreshToken, profile, cb) {
         // console.log(profile);
 
-        User.findOrCreate({ googleId: profile.id }, function (err, user) {
+        User.findOrCreate({ username: profile.emails[0].value, googleId: profile.id, }, function (err, user) {
             return cb(err, user);
         });
+
+        // User.findOrCreate({ googleId: profile.id }, function (err, user) {
+        //     return cb(err, user);
+        // });
     }
 ));
 
@@ -90,7 +94,8 @@ app.get("/", function (req, res) {
 });
 
 app.get("/auth/google",
-    passport.authenticate('google', { scope: ["profile"] })
+    passport.authenticate('google', { scope: ['profile', "email"] })
+    // passport.authenticate('google', { scope: ["profile"] })
 );
 
 app.get("/auth/google/todolist",
