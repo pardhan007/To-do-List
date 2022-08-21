@@ -1,5 +1,9 @@
 
 <%- include("header")-%>
+
+    <div class="logout-div">
+        <a type="submit" href="/logout">Logout</a>
+    </div>
     <div class="box" id="heading">
         <h1>
             <%= listTitle %>
@@ -20,9 +24,9 @@
             
             <%} %>
 
-                <form class="item" action="/" method="post">
+                <form class="item" action="/todolist" method="post">
                     <input type="text" name="itemName" placeholder="New Item" autocomplete="off">
-                    <button type="submit" name="list", value="<%=listTitle%>">+</button>
+                    <button class="submit-btn" type="submit" name="list", value="<%=listTitle%>">+</button>
                 </form>
     </div>
 

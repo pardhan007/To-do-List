@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/loginSignup.css" />
+
+    <title>Todo List</title>
+  </head>
+  <body>
+    <section>
+      <div class="img-box">
+        <img src="/images/main_image.png" alt="img2" />
+      </div>
+      <div class="content-box">
+        <div class="form-box">
+          <!-- <h1 class="form-welcome">Hello ! Welcome back.</h1> -->
+          <h2>Sign up</h2>
+          <form action="/register" method="post">
+            <div class="input-box">
+              <span>Email or Username</span>
+              <input type="text" name="username" autocomplete="off" />
+            </div>
+            <div class="input-box">
+              <span>Password</span>
+              <input type="password" name="password" />
+            </div>
+            <div class="remember">
+              <label><input type="checkbox" />Remember me?</label>
+            </div>
+            <div class="input-box">
+              <input type="submit" value="Sign up"/>
+            </div>
+            <div class="input-box">
+              <p>Alreay have a account? <a href="/">Login</a></p>
+            </div>
+          </form>
+          <h3>Sign up with social media</h3>
+          <ul class="sci">
+            <li><a href="/auth/google" role="button" class="fa fa-google"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
