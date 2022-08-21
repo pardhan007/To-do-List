@@ -87,7 +87,6 @@ app.get("/", function (req, res) {
     else {
         res.render("login");
     }
-
 });
 
 app.get("/auth/google",
@@ -108,7 +107,6 @@ app.get("/signup", function (req, res) {
 
 app.get("/todolist", function (req, res) {
 
-    let day = date.getDate();
     if (req.isAuthenticated()) {
 
         User.findById(req.user.id, function (err, foundUser) {
