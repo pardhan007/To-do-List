@@ -144,7 +144,7 @@ app.post("/login", function (req, res) {
             passport.authenticate("local")(req, res, function () {
                 res.redirect("/todolist");
             });
-            res.send("Wrong username or Password");
+            // res.redirect("/");
         }
     })
 
