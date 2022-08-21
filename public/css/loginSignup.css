@@ -193,7 +193,8 @@ section {
     .input-box input {
 
         padding: 10px 15px;
-        font-weight: 300;
+        color: #29363d;
+        font-weight: 400;
         font-size: 0.9rem;
     }
 
