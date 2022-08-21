@@ -93,7 +93,7 @@ section {
     border: 1px solid #607d8b;
     font-size: 1rem;
     letter-spacing: 1px;
-    color: #516a77;
+    color: #303e46;
     background: transparent;
     border-radius: 30px;
 }
@@ -194,7 +194,7 @@ section {
 
         padding: 10px 15px;
         font-weight: 300;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .remember {
